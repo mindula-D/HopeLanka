@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">HopeLanka</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgotPassword">Forgot Password?</string>
+    <string name="btnNewUser">New User? Sign Up</string>
+    <string name="errorMsg">Something went wrong</string>
+    <string name="tryAgain">Try Again</string>
+    <string name="loginSuccessMsg">You are logged in</string>
+    <string name="getStareted">Get Started</string>
+    <string name="forgotPwDesc">Provide the email of your account which you want to reset the password</string>
+    <string name="confirm">Confirm</string>
+    <string name="donateMoney">Donate Money</string>
+    <string name="enterAmount">Enter Amount</string>
+    <string name="donateNow">Donate Now!</string>
+    <string name="donateQuote">“Giving is not just about making a donation.
+It is about making a difference.
+This will help people with low income.</string>
+    <string name="paymentOptions">Payment Options</string>
+    <string name="creditAndDebitCards">Credit and Debit Cards</string>
+    <string name="cardNumber1">**** **** **** 1234</string>
+    <string name="bankName1">Sampath Bank</string>
+    <string name="addNewCard">Add New Card</string>
+    <string name="titleTotalAmount">Total Amount</string>
+    <string name="total">Rs.5000.00/=</string>
+    <string name="totalDesc1">You are going to make a donation of</string>
+    <string name="totalDesc2">to the HopeLanka™ Oraganization</string>
+    <string name="payNow">Pay Now</string>
+    <string name="fillTheFollowingDetails">Fill the Following Details</string>
+    <string name="cardNumber">Card Number</string>
+    <string name="month">Month</string>
+    <string name="month1">04</string>
+    <string name="year">Year</string>
+    <string name="year1">24</string>
+    <string name="cvv">CVV</string>
+    <string name="cvv1">795</string>
+    <string name="cardHolderName">Card Holder Name</string>
+    <string name="cardHolderName1">Mindula Deshapriya</string>
+    <string name="bankName">Bank Name</string>
+    <string name="visa">Visa Card</string>
+    <string name="master">Master Card</string>
+    <string name="saveCard">Save Card</string>
+    <string name="previouslyAddedCards">Previously Added Cards</string>
+    <string name="btnDelete">Delete</string>
+    <string name="btnEdit">Edit</string>
+    <string name="editCard">Edit Card Details</string>
+    <string name="cardSavedSuccessMsg">Card Saved Successfully</string>
+    <string name="ok">OK</string>
+    <string name="paymentSuccessMsg">Payment Successful</string>
+    <string name="paymentSuccessDesc">Thanks for Donating!</string>
+    <string name="cardDeleteWarning">Are You Sure to Delete Card Details?</string>
+
+
+    <string name="readyToDonate">Ready to Donate</string>
+    <string name="selectItems">Select Item(s) to Donate</string>
+    <string name="donorName1">Priyabhashini Kumarasinghe</string>
+    <string name="donorContact1">0719015948</string>
+    <string name="itemType1">Clothes</string>
+    <string name="donorEmail1">priya@gmail.com</string>
+
+
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="donationDeleteWarning">Are You Sure to Delete the Donation?</string>
+
+    <string name="donationSuccessMsg">Donation Success</string>
+    <string name="CardDetails">Card Details</string>
+    <string name="btnUpdate">Update</string>
+    <string name="viewCards">View Saved Cards</string>
+    <string name="updateCard">Update Card</string>
+    <string name="CardType">Card Type</string>
+
+    <string name="totalDonationMsg">Total amount that you have donated so far is: </string>
+
+
+
+
+</resources>
