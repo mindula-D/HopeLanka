@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Hope Lanka</string>
+
+    <!-- sign up page and update profile-->
+
+    <string name="SIGNUP">Sign Up</string>
+    <string name="REGISTER">register</string>
+    <string name="sign_Name">Name*</string>
+    <string name="sign_Password">Password</string>
+    <string name="sign_reEnter">Re-Enter password</string>
+    <string name="sign_Email">Email*</string>
+    <string name="sign_address">Address*</string>
+    <string name="sign_Contact">Contact Number*</string>
+
+    <!-- sucessfull profile-->
+
+    <string name="successfull_msg">Login Successfully</string>
+    <string name="regi_nextBtn">PROFILE</string>
+
+    <!--  update profile user inputs-->
+    <string name="profile_text1">USER PROFILE</string>
+    <string name="Display_Name"> Profile Form</string>
+    <string name="Image_Upload_btn">UPLOAD </string>
+    <string name="Profile_update_btn">Save</string>
+    <string name="Update_Edit_btn">EDIT</string>
+    <string name="Delete_btn">DELETE</string>
+
+    <!--  donate profile-->
+    <string name="Donation_Amount_Id">  Donation Amount</string>
+    <string name="Donation_Count"> Donation Count</string>
+    <string name="Donation_Amount_Id1">10000.00</string>
+    <string name="Donation_Count1">02</string>
+
+    <!--  display user profile-->
+    <string name="Update_Name1">Dilshan Aponsu</string>
+    <string name="Update_Email1">sachinDila34@gmail.com</string>
+    <string name="Update_Address1">23/A Nadimala Dehiwala</string>
+    <string name="Update_ContactNum1">0740527863</string>
+    <string name="Helper_text">Required</string>
+    <string name="sign_bio">Enter Your Bio</string>
+    <string name="Update_Bio">Donate for Children</string>
+    <string name="Donation_view_btn">View</string>
+
+</resources>

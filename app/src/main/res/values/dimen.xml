@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="headerRectangle_constraintHeight"> 60dp </dimen>
+    <dimen name="bottomNavbar_constraintHeight">56dp</dimen>
+    <dimen name="bottomNavbar_constraintWidth">413dp</dimen>
+    <dimen name="logo_height">216dp </dimen>
+    <dimen name="logo_width">205dp </dimen>
+    <dimen name="button_height">40dp </dimen>
+    <dimen name="button_width">100dp </dimen>
+    <dimen name="input_textBox_height">47dp</dimen>
+    <dimen name="input_textBox_width">300dp </dimen>
+    <dimen name="display_icon_height"> 40dp </dimen>
+    <dimen name="display_icon_width">40dp  </dimen>
+    <dimen name="text_view_rectangles_height"> 96dp</dimen>
+    <dimen name="text_view_rectangles_width">412dp</dimen>
+
+
+</resources>

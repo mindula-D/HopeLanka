@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Image_Edit_profile">
+
+    <Button
+        android:id="@+id/Image_Upload_btn"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="130dp"
+        android:backgroundTint="@color/primary"
+        android:text="@string/Image_Upload_btn"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <ImageView
+        android:id="@+id/Upload_header"
+        android:layout_width="410dp"
+        android:layout_height="@dimen/headerRectangle_constraintHeight"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="69dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/custome_rectangle" />
+
+    <TextView
+        android:id="@+id/Upload_header2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="11dp"
+        android:text="@string/profile_text1"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnknownIdInLayout" />
+
+
+    <LinearLayout
+        android:id="@+id/bottomNavbar"
+        android:layout_width="@dimen/bottomNavbar_constraintWidth"
+        android:layout_height="@dimen/bottomNavbar_constraintHeight"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginBottom="-8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_pro_btn_id"
+        tools:ignore="UnknownIdInLayout">
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_nav_icon_background"
+            android:padding="10dp"
+            app:srcCompat="@drawable/home_new" />
+
+        <ImageView
+            android:id="@+id/donate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_nav_icon_background"
+            android:padding="10dp"
+            app:srcCompat="@drawable/donate_new" />
+
+        <ImageView
+            android:id="@+id/overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_nav_icon_background"
+            android:padding="10dp"
+            app:srcCompat="@drawable/chart_histogram_new" />
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_nav_icon_background_selected"
+            android:padding="10dp"
+            app:srcCompat="@drawable/user_new" />
+
+         
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="264dp"
+        android:layout_height="304dp"
+        android:layout_marginTop="69dp"
+        app:layout_constraintBottom_toTopOf="@+id/Image_Upload_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Upload_header"
+        app:srcCompat="@drawable/round_add_a_photo_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Activity.Client_Profile"
+    tools:layout_editor_absoluteX="6dp"
+    tools:layout_editor_absoluteY="-5dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="412dp"
+        android:layout_height="@dimen/headerRectangle_constraintHeight"
+        android:layout_marginTop="-12dp"
+        app:layout_constraintBottom_toTopOf="@+id/Img_Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/custome_rectangle" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Img_Button"
+        android:layout_width="66dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="177dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="178dp"
+        android:clickable="true"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/EditImg_btn_pro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/ic_person" />
+
+
+    <TextView
+        android:id="@+id/Display_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/Display_Name"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/layout_Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditImg_btn_pro" />
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/layout_Name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="5dp"
+        android:hint="@string/sign_Name"
+        app:boxCollapsedPaddingTop="2dp"
+        app:boxStrokeColor="@color/secondary"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/black"
+        app:hintAnimationEnabled="false"
+        app:hintTextColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/layout_Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Display_Name"
+        app:passwordToggleEnabled="false"
+        app:startIconDrawable="@drawable/ic_person"
+        tools:ignore="UnknownIdInLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_Name_pro"
+            android:layout_width="@dimen/input_textBox_width"
+            android:layout_height="@dimen/input_textBox_height"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_Email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="5dp"
+        android:hint="@string/sign_Email"
+        app:boxStrokeColor="@color/secondary"
+        app:hintTextColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/layout_Address_pro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_Name"
+        app:startIconDrawable="@drawable/baseline_email_24"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_Email_pro"
+            android:layout_width="@dimen/input_textBox_width"
+            android:layout_height="@dimen/input_textBox_height"
+            android:inputType="textWebEmailAddress"
+            android:textColorHint="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/layout_Address_pro"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="5dp"
+        android:hint="@string/sign_address"
+        app:boxStrokeColor="@color/secondary"
+        app:hintTextColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/layout_ContacNum_pro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_Email"
+        app:startIconDrawable="@drawable/baseline_home_24"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_Address_pro"
+            android:layout_width="@dimen/input_textBox_width"
+            android:layout_height="@dimen/input_textBox_height"
+            android:inputType="textPostalAddress"
+            android:textColorHint="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_ContacNum_pro"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="5dp"
+        android:hint="@string/sign_Contact"
+        app:boxStrokeColor="@color/secondary"
+        app:hintTextColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/layout_bio_pro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_Address_pro"
+        app:startIconDrawable="@drawable/baseline_contact_phone_24"
+        tools:ignore="UnknownIdInLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_Number"
+            android:layout_width="@dimen/input_textBox_width"
+            android:layout_height="@dimen/input_textBox_height"
+            android:inputType="number"
+            android:textColorHint="@color/black"
+            android:maxLength="10"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/EditImg_btn_pro"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/primary"
+        android:text="@string/Update_Edit_btn"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/Display_Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Img_Button" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_bio_pro"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="17dp"
+        android:hint="@string/sign_bio"
+        app:boxStrokeColor="@color/secondary"
+        app:hintTextColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/update_pro_btn_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_ContacNum_pro"
+        app:startIconDrawable="@drawable/ic_person"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_bio_pro"
+            android:layout_width="@dimen/input_textBox_width"
+            android:layout_height="@dimen/input_textBox_height"
+            android:inputType="textShortMessage"
+            android:textColorHint="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomNavbar"
+        android:layout_width="@dimen/bottomNavbar_constraintWidth"
+        android:layout_height="@dimen/bottomNavbar_constraintHeight"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_pro_btn_id">
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_nav_icon_background"
+            android:padding="10dp"
+            app:srcCompat="@drawable/home_new" />
+
+        <ImageView
+            android:id="@+id/donate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_nav_icon_background"
+            android:padding="10dp"
+            app:srcCompat="@drawable/donate_new" />
+
+        <ImageView
+            android:id="@+id/overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_nav_icon_background"
+            android:padding="10dp"
+            app:srcCompat="@drawable/chart_histogram_new" />
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_nav_icon_background_selected"
+            android:padding="10dp"
+            app:srcCompat="@drawable/user_new" />
+
+         
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/update_pro_btn_id"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/primary"
+        android:text="@string/Profile_update_btn"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_bio_pro" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

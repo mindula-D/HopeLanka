@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/secondary"
+    android:orientation="vertical"
+    tools:context=".Activity.register_form">
+
+    <ImageView
+        android:id="@+id/wave_id_regi"
+        android:layout_width="413dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="-5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wave__3_" />
+
+    <ImageView
+        android:id="@+id/logo_regi"
+        android:layout_width="@dimen/logo_width"
+        android:layout_height="@dimen/logo_height"
+        android:layout_marginStart="104dp"
+        android:layout_marginEnd="103dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_3" />
+
+    <ImageView
+        android:id="@+id/success_regi"
+        android:layout_width="148dp"
+        android:layout_height="222dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="132dp"
+        app:layout_constraintBottom_toTopOf="@+id/regi_success_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_regi"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/successful" />
+
+    <TextView
+        android:id="@+id/regi_success_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/successfull_msg"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/success_regi" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="424dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="104dp"
+        android:rotationX="182"
+        android:rotationY="179"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regi_success_text"
+        app:layout_constraintVertical_bias="0.062"
+        app:srcCompat="@drawable/wave__3_" />
+
+    <Button
+        android:id="@+id/regi_nextBtn"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="49dp"
+        android:backgroundTint="@color/primary"
+
+        android:text="@string/regi_nextBtn"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regi_success_text" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="wave_id_regi,logo_regi" />
+</androidx.constraintlayout.widget.ConstraintLayout>
