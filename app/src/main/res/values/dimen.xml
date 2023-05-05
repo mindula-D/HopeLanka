@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="header_Height">60dp</dimen>
+    <dimen name="bottomNavbar_Height">55dp</dimen>
+    <dimen name="logo_height">250dp</dimen>
+    <dimen name="logo_width">250dp</dimen>
+    <dimen name="readyToDonate_marginStart">15dp</dimen>
+    <dimen name="back_marginStart">15dp</dimen>
+    <dimen name="back_height">30dp</dimen>
+    <dimen name="back_width">20dp</dimen>
+    <dimen name="fillFormToDonate_marginTop">10dp</dimen>
+    <dimen name="btnDonateNow_margin">20dp</dimen>
+    <dimen name="donationSuccessful_marginTop">20dp</dimen>
+    <dimen name="editDetails_marginTop">5dp</dimen>
+    <dimen name="biometricLogin_marginTop">20dp</dimen>
+    <dimen name="authenticationDesc_marginTop">20dp</dimen>
+    <dimen name="unAuthenticationDesc_marginTop">20dp</dimen>
+    <dimen name="successImg_width">148dp</dimen>
+    <dimen name="successImg_height">222dp</dimen>
+    <dimen name="errorImg_width">148dp</dimen>
+    <dimen name="errorImg_height">222dp</dimen>
+    <dimen name="warningImg_width">148dp</dimen>
+    <dimen name="warningImg_height">222dp</dimen>
+</resources>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ReadyToDonate">
+
+    <TextView
+        android:id="@+id/itemType2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/itemType1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/cardsContainer1"
+        app:layout_constraintTop_toBottomOf="@+id/donorEmail" />
+
+    <View
+        android:id="@+id/headerRectangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle"
+        app:layout_constraintHeight="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth="match_parent" />
+
+    <TextView
+        android:id="@+id/readyToDonate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-250dp"
+        android:text="@string/readyToDonate"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/headerRectangle"
+        app:layout_constraintEnd_toStartOf="@+id/headerRectangle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.533" />
+
+    <TextView
+        android:id="@+id/fillTheFollowingDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="165dp"
+        android:text="@string/selectItems"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cardsContainer1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerRectangle" />
+
+
+    <View
+        android:id="@+id/cardsContainer1"
+        android:layout_width="385dp"
+        android:layout_height="209dp"
+        android:layout_margin="15dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/rounded_rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHeight="250dp"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fillTheFollowingDetails"
+        app:layout_constraintWidth="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_nav_icon_background"
+            android:padding="10dp"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/donate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_nav_icon_background_selected"
+            android:padding="10dp"
+            app:srcCompat="@drawable/donate" />
+
+        <ImageView
+            android:id="@+id/overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_nav_icon_background"
+            android:padding="10dp"
+            app:srcCompat="@drawable/chart_histogram" />
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_nav_icon_background"
+            android:padding="10dp"
+            app:srcCompat="@drawable/user" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/donorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/donorName1"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/cardsContainer1"
+        app:layout_constraintTop_toTopOf="@+id/cardsContainer1" />
+
+    <TextView
+        android:id="@+id/donorContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/donorContact1"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/cardsContainer1"
+        app:layout_constraintTop_toBottomOf="@+id/donorName" />
+
+    <TextView
+        android:id="@+id/donorEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/donorEmail1"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/cardsContainer1"
+        app:layout_constraintTop_toBottomOf="@+id/donorContact" />
+
+    <TextView
+        android:id="@+id/itemType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/itemType1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/cardsContainer1"
+        app:layout_constraintTop_toBottomOf="@+id/donorEmail" />
+
+    <RadioButton
+        android:id="@+id/radioReadyToDonate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/itemType"
+        app:layout_constraintEnd_toEndOf="@+id/cardsContainer1"
+        app:layout_constraintTop_toTopOf="@+id/cardsContainer1" />
+
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/btnDelete"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardsContainer1"
+        app:layout_constraintEnd_toEndOf="@+id/cardsContainer1"
+        tools:ignore="UnknownId" />
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/SecondaryColor"
+        android:text="@string/btnEdit"
+        android:textAllCaps="true"
+
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardsContainer1"
+        app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+        tools:ignore="UnknownId" />
+
+    <Button
+        android:id="@+id/donateNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/SecondaryColor"
+        android:text="@string/donateDone"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardsContainer1" />
+
+    <Button
+        android:id="@+id/buttonArrow"
+        android:layout_width="60dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="-18dp"
+        android:layout_marginEnd="-58dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/arrowww"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toTopOf="@+id/fillTheFollowingDetails"
+        app:layout_constraintEnd_toStartOf="@+id/headerRectangle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/donationID"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/cardsContainer1"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="269dp" />
+
+    <TextView
+        android:id="@+id/donorDesc"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="-500dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="-28dp"
+        android:layout_marginBottom="-120dp"
+        android:text="hii"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/cardsContainer1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.614"
+        app:layout_constraintStart_toEndOf="@+id/cardsContainer1"
+        app:layout_constraintTop_toBottomOf="@+id/itemType2"
+        app:layout_constraintVertical_bias="0.275" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

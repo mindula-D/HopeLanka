@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">Hope Lanka</string>
+
+    <!--Biometric Error -->
+    <string name="BadLuck">Bad Luck!</string>
+    <string name="FingerprintAuthentication">Fingerprint authentication failed</string>
+    <string name="PleaseTryAgain">Try again</string>
+
+    <!--Biometric Login -->
+    <string name="title">Biometric login for Hope Lanka</string>
+    <string name="credential">Log in using your biometric credential</string>
+    <string name="confirm">Confirm using your fingerprint</string>
+    <string name="SignIn">Log in using username and password</string>>
+
+    <!--Biometric Success -->
+    <string name="Congratulations">Congratulations!</string>
+    <string name="BiometricAuthentication">Your Biometric Authentication has been enabled successfully</string>
+    <string name="Continue">Continue</string>>
+
+    <!--Edit Form Details and Filling the form -->
+    <string name="EditDetails">Edit Details</string>
+    <string name="Name">Name</string>
+    <string name="ContactNo">Contact Number</string>
+    <string name="Email">Email</string>
+    <string name="Description">Description</string>
+    <string name="FillTheFormToDonate">Fill the form to donate</string>
+
+    <!--Spinner -->
+    <string-array name="Donations">
+        <item></item>
+        <item>Clothes</item>
+        <item>Food</item>
+        <item>Education</item>
+        <item>Electronics</item>
+        <item>Medicine</item>
+    </string-array>
+
+    <!--Ready To Donate -->
+    <string name="readyToDonate">Ready to Donate</string>
+    <string name="selectItems">Select Item(s) to Donate</string>
+    <string name="donorName1">Priyabhashini Kumarasinghe</string>
+    <string name="donorContact1">0719015948</string>
+    <string name="itemType1">Clothes</string>
+    <string name="donorEmail1">priya@gmail.com</string>
+    <string name="btnEdit">Edit</string>
+    <string name="btnDelete">Delete</string>
+    <string name="donateNow">Donate Now!</string>
+
+
+    <!--DeleteDonation -->
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="donationDeleteWarning">Are You Sure to Delete the Donation?</string>
+
+    <!--Donation Success -->
+    <string name="DonationSuccessDesc">Thank you for the Donation</string>
+    <string name="donationSuccessMsg">Donation successful</string>
+    <string name="ok">OK</string>
+    <string name="Done">Done</string>
+    <string name="Arrow"><![CDATA[<-]]></string>
+    <string name="arroww">" ←"</string>
+    <string name="arrowww">←</string>
+    <string name="DonationDeleteMsg">Donation unsucsessful</string>
+    <string name="TryAgain">Try Again</string>
+    <string name="DonationDeleted">Form is Deleted</string>
+    <string name="deleteOk">OK</string>
+    <string name="donateDone">Done</string>
+    <string name="ImageUploading">Attach a picture</string>
+    <string name="DonationSucess">We\'ve recieved your donation request!</string>
+    <string name="DonationDesc">Our team will assist you soon</string>
+
+</resources>
