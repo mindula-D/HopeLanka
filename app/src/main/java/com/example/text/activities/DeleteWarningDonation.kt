@@ -11,9 +11,14 @@ class DeleteWarningDonation : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_delete_warning_donation)
 
+        // Getting the "yes" button from the layout file using its ID
         val donationdelete = findViewById<Button>(R.id.yes)
+
+        // Setting a click listener for the "yes" button
         donationdelete.setOnClickListener {
+            // Creating an intent to start the FetchingName activity
             val intent = Intent(this, FetchingName::class.java)
+            // Starting the FetchingName activity
             startActivity(intent)
         }
     }
