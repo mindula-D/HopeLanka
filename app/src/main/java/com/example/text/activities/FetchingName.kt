@@ -19,6 +19,7 @@ import kotlin.collections.ArrayList
 
 class FetchingName : AppCompatActivity() {
 
+    //initialize the necessary variables
     private lateinit var itemRecyclerView: RecyclerView
     private lateinit var tvLoadingData: TextView
     private lateinit var searchView: SearchView
@@ -37,6 +38,7 @@ class FetchingName : AppCompatActivity() {
         tvLoadingData = findViewById(R.id.tvLoadingData)
         searchView =  findViewById(R.id.searchView)
 
+        //set up the search functionality
         searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 return false
@@ -52,9 +54,11 @@ class FetchingName : AppCompatActivity() {
         //initialize the array list
         itemList = arrayListOf<DonationModel>()
 
+        //call the method to get the data from the database
         getCustomerData()
     }
 
+    //method to filter the list based on the search query
     private fun filterList(query: String?) {
         if (query != null) {
             val filteredList = ArrayList<DonationModel>()
@@ -72,7 +76,7 @@ class FetchingName : AppCompatActivity() {
         }
     }
 
-
+    //method to get the data from the database
     private fun getCustomerData() {
         itemRecyclerView.visibility = View.GONE
         tvLoadingData.visibility = View.VISIBLE
@@ -88,22 +92,28 @@ class FetchingName : AppCompatActivity() {
                         val itemData = itemSnap.getValue(DonationModel::class.java)
                         itemList.add(itemData!!)
                     }
+                    // Create a new instance of ItemAdapter and pass the itemList and a listener to handle clicks on each item
                     adapter = ItemAdapter(itemList, object: ItemAdapter.OnItemClickListener{
                         override fun onItemClick(position: Int) {
+                            // Create a new Intent to navigate to ReadyToDonate activity
                             val intent = Intent(this@FetchingName, ReadyToDonate::class.java)
 
-                            //put extras
+                            // Put extras in the intent to pass data to the ReadyToDonate activity
                             intent.putExtra("DonationId", itemList[position].donationId)
                             intent.putExtra("name", itemList[position].Name)
                             intent.putExtra("number", itemList[position].Number)
                             intent.putExtra("email", itemList[position].Email)
                             intent.putExtra("type", itemList[position].Typee)
                             intent.putExtra("description", itemList[position].Description)
+
+                            // Start the ReadyToDonate activity with the created intent
                             startActivity(intent)
                         }
                     })
+                    // Set the adapter to the RecyclerView
                     itemRecyclerView.adapter = adapter
 
+                    // Make the RecyclerView visible and hide the loading text view
                     itemRecyclerView.visibility = View.VISIBLE
                     tvLoadingData.visibility = View.GONE
                 }
