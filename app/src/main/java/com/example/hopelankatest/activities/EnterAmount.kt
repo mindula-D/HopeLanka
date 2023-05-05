@@ -21,34 +21,29 @@ import javax.mail.internet.MimeMessage
 
 class EnterAmount : AppCompatActivity() {
 
+    // Declare variables for the views and buttons in the layout
     private lateinit var etAmount: TextInputLayout
     private lateinit var btnDonateNow: Button
-   // private lateinit var btnSendEmail: Button
     private lateinit var dbRef: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_enter_amount)
 
+        // find the enter amount textview
         etAmount = findViewById(R.id.rs)
+        // find the donate now button view
         btnDonateNow = findViewById(R.id.btnDonateNow)
-        //btnSendEmail = findViewById(R.id.btnSendEmail)
 
+        // Get a reference to the "CardDetails" node in the database
         dbRef = FirebaseDatabase.getInstance().getReference("DonationAmount")
 
+        // Set a click listener for the donate now button
         btnDonateNow.setOnClickListener {
             saveDonationAmount()
         }
-//        btnSendEmail.setOnClickListener {
-//            buttonSendEmail()
-//        }
 
-//        val btnDonateNow = findViewById<Button>(R.id.btnDonateNow)
-//        btnDonateNow.setOnClickListener{
-//            val intent = Intent(this, PreviouslyAddedCards::class.java)
-//            startActivity(intent)
-//        }
-
+        // Set a click listener for the back button
         val imageView = findViewById<ImageView>(R.id.back)
         imageView.setOnClickListener{
             val intent = Intent(this, Login::class.java)
@@ -56,29 +51,30 @@ class EnterAmount : AppCompatActivity() {
         }
     }
 
+    // Function to save the donation amount
     private fun saveDonationAmount() {
 
+        // Get the amount from layout
         val amount = etAmount.editText?.text.toString()
 
+        // Check if field is empty
         if (amount.isEmpty()) {
             Toast.makeText(this, "Please enter amount", Toast.LENGTH_SHORT).show()
             return
         }
 
+        //unique ID for the payment
         val paymentId = dbRef.push().key!!
 
+        // Create a new payment object
         val payment = PaymentModel(paymentId, amount)
 
+        // Save the new payment object to the database
         dbRef.child(paymentId).setValue(payment)
             .addOnCompleteListener {
                 etAmount.editText?.text?.clear()
 
-//                val btnDonateNow = findViewById<Button>(R.id.btnDonateNow)
-//                btnDonateNow.setOnClickListener{
-//                    val intent = Intent(this, PreviouslyAddedCards::class.java)
-//                    startActivity(intent)
-//                }
-
+                // Launch the activity
                 val intent = Intent(this, PaymentOptions::class.java).also {
                     it.putExtra("amount", amount)
                     startActivity(it)
