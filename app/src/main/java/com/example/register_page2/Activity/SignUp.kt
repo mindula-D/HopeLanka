@@ -28,7 +28,7 @@ class SignUp: AppCompatActivity()  {
 
 
         binding.button.setOnClickListener{
-            // Get email, password, and confirmed password from the EditText fields
+            //  email, password, and confirmed password from the EditText fields
             val email = binding.emailEt.text.toString()
             val pass = binding.passET.text.toString()
             val rePass = binding.confirmPassEt.text.toString()
