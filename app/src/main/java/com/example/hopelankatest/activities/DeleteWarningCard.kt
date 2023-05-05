@@ -11,12 +11,14 @@ class DeleteWarningCard : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_delete_warning_card)
 
+        // Set a click listener for the No button
         val btnYes = findViewById<Button>(R.id.yes)
         btnYes.setOnClickListener{
             val intent = Intent(this, PreviouslyAddedCards::class.java)
             startActivity(intent)
         }
 
+        // Set a click listener for the Yes button
         val btnNo = findViewById<Button>(R.id.no)
         btnNo.setOnClickListener{
             val intent = Intent(this, CardDetails::class.java)
