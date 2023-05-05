@@ -103,7 +103,7 @@ class AddNewCard : AppCompatActivity() {
                 etBankName.editText?.text?.clear()
                 cardTypeRadioGroup.clearCheck()
 
-                // Launch the activity
+                // Launch the CardSavedSuccessfully
                 val intent = Intent(this, CardSavedSuccessfully::class.java)
                 startActivity(intent)
             }.addOnFailureListener { err ->
