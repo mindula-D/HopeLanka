@@ -74,8 +74,9 @@ class EnterAmount : AppCompatActivity() {
             .addOnCompleteListener {
                 etAmount.editText?.text?.clear()
 
-                // Launch the activity
+                // Launch the PaymentOptions
                 val intent = Intent(this, PaymentOptions::class.java).also {
+                    //pass the value of amount in to PaymentOptions
                     it.putExtra("amount", amount)
                     startActivity(it)
                 }
