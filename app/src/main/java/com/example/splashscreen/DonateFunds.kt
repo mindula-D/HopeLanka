@@ -32,12 +32,14 @@ class DonateFunds : AppCompatActivity() {
             startActivity(Intent)
         }
 
+        //Move to Overview Tab
         val overviewTab = findViewById<ImageView>(R.id.overview)
         overviewTab.setOnClickListener {
             val Intent = Intent(this, OverviewStatistics::class.java)
             startActivity(Intent)
         }
 
+        //Move to Home Tab
         val homeTab = findViewById<ImageView>(R.id.home)
         homeTab.setOnClickListener {
             val Intent = Intent(this, HomeFeed::class.java)
