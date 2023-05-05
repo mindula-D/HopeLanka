@@ -24,20 +24,29 @@ class ReadyToDonate : AppCompatActivity() {
         setContentView(R.layout.activity_ready_to_donate)
         btnDelete = findViewById(R.id.btnDelete)
         builder = AlertDialog.Builder(this)
+
+        // initialize views
         initView()
+
+        // set data to views
         setValuesToViews()
 
+
+        // initialize back arrow button and set click listener
         val backArrow = findViewById<Button>(R.id.buttonArrow)
         backArrow.setOnClickListener {
             val intent = Intent(this, FetchingName::class.java)
             startActivity(intent)}
 
+        // initialize donation done button and set click listener
         val donationdone = findViewById<Button>(R.id.donateNow)
         donationdone.setOnClickListener {
             val intent = Intent(this, DonationSuccess::class.java)
             startActivity(intent) }
+
         //add a click listener to edit button
         btnUpdate.setOnClickListener {
+            // open update dialog with existing data
             openUpdateDialog(
                 intent.getStringExtra("DonationId").toString(),
                 intent.getStringExtra("name").toString()
@@ -49,16 +58,20 @@ class ReadyToDonate : AppCompatActivity() {
             )
         }
 
+        // add click listener to delete button
         btnDelete.setOnClickListener {
+            // create alert dialog to confirm deletion
             builder.setTitle("Alert!")
                 .setMessage("Do you want to delete the form")
                 .setCancelable(true)
                 .setPositiveButton("Yes"){dialogInterface,it ->
+                    // delete record and finish activity
                     deleteRecord(
                         intent.getStringExtra("DonationId").toString())
                     finish()
                 }
                 .setNegativeButton("No"){dialogInterface,it ->
+                    // dismiss dialog
                     dialogInterface.cancel()
                 }
                 .show()
@@ -67,7 +80,7 @@ class ReadyToDonate : AppCompatActivity() {
 
         }
 
-
+    // initialize views
     private fun initView() {
         tvdonationId = findViewById(R.id.donationID)
         tvName = findViewById(R.id.donorName)
@@ -76,10 +89,12 @@ class ReadyToDonate : AppCompatActivity() {
         tvType = findViewById(R.id.itemType)
         tvDesc = findViewById(R.id.donorDesc)
 
+        // initialize update and delete buttons
         btnUpdate = findViewById(R.id.btnEdit)
         btnDelete = findViewById(R.id.btnDelete)
     }
 
+    // set data to views
     private fun setValuesToViews() {
         tvdonationId.text = intent.getStringExtra("DonationId")
         tvName.text = intent.getStringExtra("name")
@@ -89,7 +104,7 @@ class ReadyToDonate : AppCompatActivity() {
         tvDesc.text = intent.getStringExtra("description")
 
     }
-//delete function
+    //delete function
     private fun deleteRecord(
         id: String
     ){
@@ -97,25 +112,29 @@ class ReadyToDonate : AppCompatActivity() {
         val iTask = dbRef.removeValue()
 
         iTask.addOnSuccessListener {
+            // show toast message on success
             Toast.makeText(this, "Form is deleted", Toast.LENGTH_LONG).show()
-
+            // navigate to delete warning donation activity
             val intent = Intent(this, DeleteWarningDonation::class.java)
             finish()
             startActivity(intent)
         }.addOnFailureListener{ error ->
+            // show toast message on failure
             Toast.makeText(this, "Deleting Err ${error.message}", Toast.LENGTH_LONG).show()
         }
     }
     private fun openUpdateDialog(
-        DonationId: String,
-        name: String
+        DonationId: String,  // id of the donation item to be updated
+        name: String        // name of the donation item to be updated
     ) {
+        // create an AlertDialog to display the update dialog
         val iDialog = AlertDialog.Builder(this)
         val inflater = layoutInflater
         val iDialogView = inflater.inflate(R.layout.item_update_dialog, null)
 
         iDialog.setView(iDialogView)
 
+        // get references to the EditText views in the update dialog
         val Name = iDialogView.findViewById<EditText>(R.id.Name)
         val Number = iDialogView.findViewById<EditText>(R.id.donornumber)
         val Email = iDialogView.findViewById<EditText>(R.id.donoremail)
@@ -123,21 +142,23 @@ class ReadyToDonate : AppCompatActivity() {
         val Decription = iDialogView.findViewById<EditText>(R.id.description)
         val updatebutton = iDialogView.findViewById<Button>(R.id.btnUpdate)
 
+        // set the text of the EditText views to the current values of the item to be updated
         Name.setText(intent.getStringExtra("name").toString())
         Number.setText(intent.getStringExtra("number").toString())
         Email.setText(intent.getStringExtra("email").toString())
         Type.setText(intent.getStringExtra("type").toString())
         Decription.setText(intent.getStringExtra("description").toString())
 
-
-
-      //setting the dialog title
+        //setting the dialog title
         iDialog.setTitle("Updating $name Record")
 
+        // create and display the update dialog
         val alertDialogg = iDialog.create()
         alertDialogg.show()
 
+        // set an OnClickListener for the "Update" button in the dialog
         updatebutton.setOnClickListener {
+            // call the updateItemData function with the new values entered in the dialog
             updateItemData(
                 DonationId,
                 Name.text.toString(),
@@ -147,21 +168,22 @@ class ReadyToDonate : AppCompatActivity() {
                 Decription.text.toString()
             )
 
-
+            // display a Toast message to indicate that the item was updated successfully
             Toast.makeText(applicationContext, "Item Form Updated", Toast.LENGTH_LONG).show()
 
-            //we are setting updated data to our textviews
+            // set the text of the TextView views in the main activity to the updated values
             tvName.text =   Name.text.toString()
             tvNumber.text = Number.text.toString()
             tvEmail.text =  Email.text.toString()
             tvType.text =   Type.text.toString()
             tvDesc.text =   Decription.text.toString()
 
-
+            // dismiss the update dialog
             alertDialogg.dismiss()
         }
 
     }
+    // function to update the item data in the Firebase Realtime Database
     private fun updateItemData(
         id: String,
         name: String,
@@ -170,8 +192,11 @@ class ReadyToDonate : AppCompatActivity() {
         type:String,
         description:String
     ) {
+        // get a reference to the item to be updated in the Firebase Realtime Database
         val dbRef = FirebaseDatabase.getInstance().getReference("ItemDonation").child(id)
+        // create a DonationModel object with the updated values
         val itemInfo = DonationModel(id,name,number,email,type,description)
+        // update the data for the item in the Firebase Realtime Database
         dbRef.setValue(itemInfo)
 
     }
