@@ -11,6 +11,7 @@ class CardSavedSuccessfully : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_card_saved_successfully)
 
+        // Set a click listener for the ok button
         val ok = findViewById<Button>(R.id.ok)
         ok.setOnClickListener{
             val intent = Intent(this, PreviouslyAddedCards::class.java)
