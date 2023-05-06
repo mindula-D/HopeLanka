@@ -21,6 +21,7 @@ class DonateFunds : AppCompatActivity() {
             startActivity(Intent)
         }
 
+        //Move to Donate Remind Manager Page
         val addImage = findViewById<ImageView>(R.id.addButton)
         addImage.setOnClickListener {
             val Intent = Intent(this, RemindManager::class.java)
