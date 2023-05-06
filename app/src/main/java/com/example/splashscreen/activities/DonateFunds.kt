@@ -14,6 +14,7 @@ class DonateFunds : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_donate_funds)
 
+        //Move to Donate Items Page
         val itemsText = findViewById<TextView>(R.id.donateItems)
         itemsText.setOnClickListener {
             val Intent = Intent(this, DonateItems::class.java)
