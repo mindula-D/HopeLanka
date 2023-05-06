@@ -1,4 +1,4 @@
-package com.example.splashscreen
+package com.example.splashscreen.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -10,7 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import com.example.splashscreen.activities.MyReminders
+import com.example.splashscreen.R
 import com.example.splashscreen.models.ReminderModel
 import com.google.firebase.database.FirebaseDatabase
 

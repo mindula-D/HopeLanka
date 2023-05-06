@@ -1,4 +1,4 @@
-package com.example.splashscreen
+package com.example.splashscreen.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -6,17 +6,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
-import com.example.splashscreen.activities.RemindManager
+import com.example.splashscreen.R
 
-class DonateItems : AppCompatActivity() {
+class DonateFunds : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_donate_items)
+        setContentView(R.layout.activity_donate_funds)
 
-        val fundsText = findViewById<TextView>(R.id.donateFunds)
-        fundsText.setOnClickListener {
-            val Intent = Intent(this, DonateFunds::class.java)
+        val itemsText = findViewById<TextView>(R.id.donateItems)
+        itemsText.setOnClickListener {
+            val Intent = Intent(this, DonateItems::class.java)
             startActivity(Intent)
         }
 
@@ -32,12 +32,14 @@ class DonateItems : AppCompatActivity() {
             startActivity(Intent)
         }
 
+        //Move to Overview Tab
         val overviewTab = findViewById<ImageView>(R.id.overview)
         overviewTab.setOnClickListener {
             val Intent = Intent(this, OverviewStatistics::class.java)
             startActivity(Intent)
         }
 
+        //Move to Home Tab
         val homeTab = findViewById<ImageView>(R.id.home)
         homeTab.setOnClickListener {
             val Intent = Intent(this, HomeFeed::class.java)

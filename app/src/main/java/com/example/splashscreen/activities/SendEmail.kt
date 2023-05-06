@@ -1,11 +1,11 @@
-package com.example.splashscreen
+package com.example.splashscreen.activities
 
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import android.widget.Toast
+import com.example.splashscreen.R
 import com.example.splashscreen.databinding.ActivitySendEmailBinding
 
 class SendEmail : AppCompatActivity() {

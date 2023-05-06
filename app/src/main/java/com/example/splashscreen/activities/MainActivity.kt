@@ -1,9 +1,10 @@
-package com.example.splashscreen
+package com.example.splashscreen.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.example.splashscreen.R
 
 class MainActivity : AppCompatActivity() {
 

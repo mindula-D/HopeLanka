@@ -10,10 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.splashscreen.HomeFeed
-import com.example.splashscreen.OverviewStatistics
 import com.example.splashscreen.R
-import com.example.splashscreen.ReminderDetails
 import com.example.splashscreen.adapters.RemAdapter
 import com.example.splashscreen.models.ReminderModel
 import com.google.firebase.database.*

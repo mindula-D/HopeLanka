@@ -1,13 +1,13 @@
-package com.example.splashscreen
+package com.example.splashscreen.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.splashscreen.R
 
 class HomeFeed : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -17,7 +17,7 @@ class HomeFeed : AppCompatActivity() {
 
         val donateButton = findViewById<Button>(R.id.donateButton)
         donateButton.setOnClickListener {
-            val Intent = Intent(this,DonateItems::class.java)
+            val Intent = Intent(this, DonateItems::class.java)
             startActivity(Intent)
         }
 

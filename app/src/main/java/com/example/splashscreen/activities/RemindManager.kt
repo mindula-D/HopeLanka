@@ -8,8 +8,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
-import com.example.splashscreen.HomeFeed
-import com.example.splashscreen.OverviewStatistics
 import com.example.splashscreen.R
 import com.example.splashscreen.models.ReminderModel
 import com.google.firebase.database.DatabaseReference

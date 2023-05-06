@@ -1,12 +1,12 @@
-package com.example.splashscreen
+package com.example.splashscreen.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.splashscreen.R
 
 class HomeAbout : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
