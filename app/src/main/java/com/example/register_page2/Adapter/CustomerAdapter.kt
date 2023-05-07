@@ -19,8 +19,9 @@ class CustomerAdapter(private val customerList:ArrayList<CustomerModel>): Recycl
         fun onItemClick(position: Int)
 
     }
+    // Method to set the click listener
     fun setOnItemClickListener(clickListener: onItemClickListener){
-         cListener=clickListener
+        cListener=clickListener
 
     }
 
