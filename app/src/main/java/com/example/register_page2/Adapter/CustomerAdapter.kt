@@ -14,7 +14,7 @@ class CustomerAdapter(private val customerList:ArrayList<CustomerModel>): Recycl
     private lateinit var cListener: onItemClickListener
 
 
-
+    // Interface for click listener
     interface onItemClickListener{
         fun onItemClick(position: Int)
 
