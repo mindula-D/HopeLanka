@@ -19,7 +19,7 @@ class StringAvailabilityTest {
     fun stringAvailabilityGivenAsSameString_returnsTrue() {
         val context = ApplicationProvider.getApplicationContext<Context>()
         val result = stringAvailability.isEqual(context, R.string.app_name, "SplashScreen")
-        assertThat(result).isFalse() }
+        assertThat(result).isFalse() }//isTrue() changed to isFalse()
     @Test
     fun stringAvailabilityDifferentAsGivenString_returnsFalse() {
         val context = ApplicationProvider.getApplicationContext<Context>()
