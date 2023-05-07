@@ -10,15 +10,12 @@
         android:id="@+id/Image_Upload_btn"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="130dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="100dp"
         android:backgroundTint="@color/primary"
         android:text="@string/Image_Upload_btn"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/Upload_header"
