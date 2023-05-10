@@ -373,7 +373,7 @@
         app:layout_constraintVertical_bias="0.892" />
 
     <ImageView
-        android:id="@+id/imageView17"
+        android:id="@+id/imgFacebook"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="29dp"
@@ -386,7 +386,7 @@
         app:tint="#82CD47" />
 
     <ImageView
-        android:id="@+id/imageView18"
+        android:id="@+id/imgLinkedin"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="597dp"
@@ -399,7 +399,7 @@
         app:tint="#82CD47" />
 
     <ImageView
-        android:id="@+id/imageView21"
+        android:id="@+id/imgTiktok"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="332dp"
@@ -412,7 +412,7 @@
         app:tint="#82CD47" />
 
     <ImageView
-        android:id="@+id/imageView22"
+        android:id="@+id/imgInstagram"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="104dp"
@@ -425,7 +425,7 @@
         app:tint="#82CD47" />
 
     <ImageView
-        android:id="@+id/imageView23"
+        android:id="@+id/imgTwitter"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="259dp"
