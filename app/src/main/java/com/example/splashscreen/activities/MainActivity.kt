@@ -8,6 +8,7 @@ import com.example.splashscreen.R
 
 class MainActivity : AppCompatActivity() {
 
+    //Loading time
     private val  SPLASH_TIME: Long = 4000
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+        //Splashscreen Loading
         Handler().postDelayed( {
             startActivity(Intent (this, HomeFeed::class.java))
             finish()
