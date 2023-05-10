@@ -17,12 +17,15 @@ class SendEmail : AppCompatActivity() {
         binding = ActivitySendEmailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+        //Navigate to Home Tab
         val homeTab = findViewById<ImageView>(R.id.home)
         homeTab.setOnClickListener {
             val Intent = Intent(this, HomeFeed::class.java)
             startActivity(Intent)
         }
 
+        //Navigate to Donate Tab
         val donateTab = findViewById<ImageView>(R.id.donate)
         donateTab.setOnClickListener {
             val Intent = Intent(this, DonateItems::class.java)
