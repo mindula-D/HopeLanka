@@ -36,18 +36,22 @@ class MyReminders : AppCompatActivity() {
 
         getReminderData()
 
+
+        //Navigate to Remind Manager
         val remindersButton = findViewById<Button>(R.id.goToRemindManagerButton)
         remindersButton.setOnClickListener {
             val Activity = Intent(this, RemindManager::class.java)
             startActivity(Activity)
         }
 
+        //Navigate to Overview tab
         val overviewTab = findViewById<ImageView>(R.id.overview)
         overviewTab.setOnClickListener {
             val Intent = Intent(this, OverviewStatistics::class.java)
             startActivity(Intent)
         }
 
+        //Navigate to Home tab
         val homeTab = findViewById<ImageView>(R.id.home)
         homeTab.setOnClickListener {
             val Intent = Intent(this, HomeFeed::class.java)

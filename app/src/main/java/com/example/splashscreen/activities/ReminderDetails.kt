@@ -32,18 +32,22 @@ class ReminderDetails : AppCompatActivity() {
         btnDelete = findViewById(R.id.btnDelete)
         builder = AlertDialog.Builder(this)
 
+
+        //Navigate to Overview Tab
         val overviewTab = findViewById<ImageView>(R.id.overview)
         overviewTab.setOnClickListener {
             val Intent = Intent(this, OverviewStatistics::class.java)
             startActivity(Intent)
         }
 
+        //Navigate to Home Tab
         val homeTab = findViewById<ImageView>(R.id.home)
         homeTab.setOnClickListener {
             val Intent = Intent(this, HomeFeed::class.java)
             startActivity(Intent)
         }
 
+        //Navigate to My Reminders
         val goBackText = findViewById<TextView>(R.id.goBackToReminders)
         goBackText.setOnClickListener {
             val intent = Intent(this,MyReminders::class.java)
@@ -53,6 +57,8 @@ class ReminderDetails : AppCompatActivity() {
         initView()
         setValuesToViews()
 
+
+        //Update button
         btnUpdate.setOnClickListener {
             openUpdateDialog(
                 intent.getStringExtra("remID").toString(),
@@ -60,6 +66,7 @@ class ReminderDetails : AppCompatActivity() {
             )
         }
 
+        //Delete button
         btnDelete.setOnClickListener {
             builder.setTitle("Alert!")
                 .setMessage("Confirm Delete!")
