@@ -218,15 +218,16 @@
         app:layout_constraintVertical_bias="0.902" />
 
     <TextView
-        android:id="@+id/clickHere"
+        android:id="@+id/clickHere2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginTop="495dp"
         android:layout_marginEnd="252dp"
         android:layout_marginBottom="222dp"
         android:text="Click Here!  "
         android:textColor="#54B435"
         android:textSize="10sp"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
