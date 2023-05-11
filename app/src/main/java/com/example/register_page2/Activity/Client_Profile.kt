@@ -78,8 +78,18 @@ class Client_Profile : AppCompatActivity() {
         if (input_Name_pro.isEmpty()||input_Email_pro.isEmpty()||input_Address_pro.isEmpty()||input_Number.isEmpty()||input_bio_pro.isEmpty()){
             Toast.makeText(this, "Please fill in all feields", Toast.LENGTH_SHORT).show()
             return
-
-
+        }
+        if(!input_Email_pro.contains("@")) {
+            Toast.makeText(this, "Please enter a valid email address", Toast.LENGTH_SHORT).show()
+            return
+        }else{
+            email.error = null
+        }
+        if (input_Number.length != 10) {
+            Toast.makeText(this, "Please enter a 10-digit contact number", Toast.LENGTH_SHORT).show()
+            return
+        } else {
+            contact.error = null
         }
 
 
@@ -100,24 +110,16 @@ class Client_Profile : AppCompatActivity() {
                 Toast.makeText(this,"Error ${err.message}",Toast.LENGTH_LONG).show()
             }
 
-        if(!input_Email_pro.contains("@")) {
-            Toast.makeText(this, "Please enter a valid email address", Toast.LENGTH_SHORT).show()
-            return
-        }
 
-        var  update_pro_btn =findViewById<Button>(R.id.update_pro_btn_id)
-        update_pro_btn.setOnClickListener{
 
-            val intent = Intent (this, FetchingActivity ::class.java)
+
+
+            val intent = Intent(this, FetchingActivity::class.java)
             startActivity(intent)
-      }
 
-        // var  update_pro_btn =findViewById<Button>(R.id.update_pro_btn_id)
-        // update_pro_btn.setOnClickListener{
 
-//            val intent = Intent (this, FetchingActivity::class.java)
-//            startActivity(intent)
-        // }
+
+
 
 
     }
