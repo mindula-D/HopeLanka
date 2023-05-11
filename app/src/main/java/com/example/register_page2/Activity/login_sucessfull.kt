@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import com.example.register_page2.R
 
-class register_form : AppCompatActivity() {
+class login_sucessfull : AppCompatActivity() {
 
     // login sucessfull page
     override fun onCreate(savedInstanceState: Bundle?) {
