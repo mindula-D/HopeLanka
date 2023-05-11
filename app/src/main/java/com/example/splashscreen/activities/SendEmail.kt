@@ -8,6 +8,9 @@ import android.widget.ImageView
 import com.example.splashscreen.R
 import com.example.splashscreen.databinding.ActivitySendEmailBinding
 
+
+//Email Sending Function
+//Using email apps installed on the device
 class SendEmail : AppCompatActivity() {
 
     lateinit var binding : ActivitySendEmailBinding

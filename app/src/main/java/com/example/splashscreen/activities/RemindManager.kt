@@ -13,6 +13,9 @@ import com.example.splashscreen.models.ReminderModel
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
+//Create CRUD Operations
+//Storing data in Firebase Realtime Database
+//Validaations
 class RemindManager : AppCompatActivity() {
 
     private lateinit var reminderName: EditText
