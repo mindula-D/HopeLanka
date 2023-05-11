@@ -15,6 +15,8 @@ import com.example.splashscreen.adapters.RemAdapter
 import com.example.splashscreen.models.ReminderModel
 import com.google.firebase.database.*
 
+
+//Retrieve and Insert CRUD Operations / Mainly Retrieve
 class MyReminders : AppCompatActivity() {
 
     private lateinit var remRecyclerView: RecyclerView

@@ -14,6 +14,8 @@ import com.example.splashscreen.R
 import com.example.splashscreen.models.ReminderModel
 import com.google.firebase.database.FirebaseDatabase
 
+
+//Retrieve, Update and Delete CRUD Operations
 class ReminderDetails : AppCompatActivity() {
 
     private lateinit var tvRemID: TextView
