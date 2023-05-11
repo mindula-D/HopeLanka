@@ -29,7 +29,7 @@
             android:name=".Activity.CustomerDetailsActivity"
             android:exported="true" />
         <activity
-            android:name=".Activity.register_form"
+            android:name=".Activity.login_sucessfull"
             android:exported="true" />
         <activity
             android:name=".Activity.SignUp"
