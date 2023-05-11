@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     android:padding="10dp">
 
@@ -10,16 +11,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:backgroundTint="@color/primary"
         android:hint="Name"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/update_Email_pro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:backgroundTint="@color/primary"
         android:ems="10"
-        android:hint="Email" />
+        android:hint="Email"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
 
     <EditText
@@ -28,9 +35,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="35dp"
+        android:backgroundTint="@color/primary"
         android:ems="10"
         android:hint="Address"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
     <!--    <Spinner-->
     <!--        android:id="@+id/type"-->
     <!--        android:layout_width="match_parent"-->
@@ -41,8 +51,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:backgroundTint="@color/primary"
         android:hint="Contact NUmber"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/update_bio_pro"
@@ -50,7 +63,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:hint="Bio"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/updateButton"
@@ -58,7 +73,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="Update Data" />
+        android:text="Update Data"
+        android:textSize="16sp" />
 
 
 </LinearLayout>
