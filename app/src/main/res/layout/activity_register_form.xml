@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:backgroundTint="@color/secondary"
     android:orientation="vertical"
-    tools:context=".Activity.register_form">
+    tools:context=".Activity.login_sucessfull">
 
     <ImageView
         android:id="@+id/wave_id_regi"
