@@ -8,8 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 //import com.example.register_page2.Activity.databinding.ActivitySignInBinding
 import com.example.register_page2.databinding.ActivitySigninBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
-import com.google.firebase.auth.FirebaseAuthInvalidUserException
 
 class SignInActivity : AppCompatActivity() {
 
@@ -40,7 +38,7 @@ class SignInActivity : AppCompatActivity() {
                     if (it.isSuccessful) {
                         val firebaseUser = firebaseAuth.currentUser
                         if (firebaseUser != null && firebaseUser.email == email) {
-                        val intent = Intent(this, register_form::class.java)
+                        val intent = Intent(this, login_sucessfull::class.java)
                         startActivity(intent)
                         }
                     } else {
