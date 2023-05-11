@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 //import com.example.register_page2.Activity.databinding.ActivitySignInBinding
 import com.example.register_page2.databinding.ActivitySigninBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.auth.FirebaseAuthInvalidUserException
 
 class SignInActivity : AppCompatActivity() {
 
@@ -36,10 +38,13 @@ class SignInActivity : AppCompatActivity() {
 
                 firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
                     if (it.isSuccessful) {
+                        val firebaseUser = firebaseAuth.currentUser
+                        if (firebaseUser != null && firebaseUser.email == email) {
                         val intent = Intent(this, register_form::class.java)
                         startActivity(intent)
+                        }
                     } else {
-                        Toast.makeText(this,"You are not SignUp!Please SignUp" , Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this,"Invalid email or password!" , Toast.LENGTH_SHORT).show()
 
                     }
                 }
@@ -47,7 +52,11 @@ class SignInActivity : AppCompatActivity() {
                 Toast.makeText(this, "Empty Fields Are not Allowed !!", Toast.LENGTH_SHORT).show()
 
             }
+
         }
+
+
+
     }
 
     // direct login to system code
